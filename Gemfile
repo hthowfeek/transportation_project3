@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'bootstrap-sass'
 gem "heroku"
 gem "bcrypt-ruby"
+gem 'carrierwave'
 
 group :production do
   gem 'pg'

@@ -11,6 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20121126111045) do
+
+  create_table "vehicles", :force => true do |t|
+    t.string   "make"
+    t.string   "model"
+    t.string   "color"
+    t.integer  "license_plate"
+    t.text     "description"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "photo"
+  end
 
 end

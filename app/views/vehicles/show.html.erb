@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <b>License:</b>
-  <%= @vehicle.license %>
+  <b>License plate:</b>
+  <%= @vehicle.license_plate %>
 </p>
 
 <p>
@@ -25,6 +25,9 @@
   <%= @vehicle.description %>
 </p>
 
+<% unless @vehicle.photo_url.nil? %>
+  <p><%= image_tag @vehicle.photo_url %></p>
+<% end %>
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
 <%= link_to 'Back', vehicles_path %>

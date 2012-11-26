@@ -7,15 +7,15 @@ describe "vehicles/index" do
         :make => "Make",
         :model => "Model",
         :color => "Color",
-        :license => 1,
-        :description => ""
+        :license_plate => 1,
+        :description => "MyText"
       ),
       stub_model(Vehicle,
         :make => "Make",
         :model => "Model",
         :color => "Color",
-        :license => 1,
-        :description => ""
+        :license_plate => 1,
+        :description => "MyText"
       )
     ])
   end
@@ -27,6 +27,6 @@ describe "vehicles/index" do
     assert_select "tr>td", :text => "Model".to_s, :count => 2
     assert_select "tr>td", :text => "Color".to_s, :count => 2
     assert_select "tr>td", :text => 1.to_s, :count => 2
-    assert_select "tr>td", :text => "".to_s, :count => 2
+    assert_select "tr>td", :text => "MyText".to_s, :count => 2
   end
 end

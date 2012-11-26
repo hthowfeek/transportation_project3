@@ -6,8 +6,8 @@ describe "vehicles/show" do
       :make => "Make",
       :model => "Model",
       :color => "Color",
-      :license => 1,
-      :description => ""
+      :license_plate => 1,
+      :description => "MyText"
     ))
   end
 
@@ -18,6 +18,6 @@ describe "vehicles/show" do
     rendered.should match(/Model/)
     rendered.should match(/Color/)
     rendered.should match(/1/)
-    rendered.should match(//)
+    rendered.should match(/MyText/)
   end
 end

@@ -6,8 +6,8 @@ describe "vehicles/new" do
       :make => "MyString",
       :model => "MyString",
       :color => "MyString",
-      :license => 1,
-      :description => ""
+      :license_plate => 1,
+      :description => "MyText"
     ).as_new_record)
   end
 
@@ -19,8 +19,8 @@ describe "vehicles/new" do
       assert_select "input#vehicle_make", :name => "vehicle[make]"
       assert_select "input#vehicle_model", :name => "vehicle[model]"
       assert_select "input#vehicle_color", :name => "vehicle[color]"
-      assert_select "input#vehicle_license", :name => "vehicle[license]"
-      assert_select "input#vehicle_description", :name => "vehicle[description]"
+      assert_select "input#vehicle_license_plate", :name => "vehicle[license_plate]"
+      assert_select "textarea#vehicle_description", :name => "vehicle[description]"
     end
   end
 end
