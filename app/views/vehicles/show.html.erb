@@ -25,9 +25,10 @@
   <%= @vehicle.description %>
 </p>
 
-<% unless @vehicle.photo_url.nil? %>
-  <p><%= image_tag @vehicle.photo_url %></p>
-<% end %>
+<p>
+  <b>Image:</b>
+  <%= image_tag @vehicle.image_url.to_s %>
+</p>
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
 <%= link_to 'Back', vehicles_path %>
